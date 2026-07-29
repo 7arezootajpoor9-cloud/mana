@@ -1,0 +1,157 @@
+.product-showcase{
+    width:100%;
+    background:#003190;
+    overflow:hidden;
+    position:relative;
+}
+
+.product-showcase__slider{
+    width:100%;
+}
+
+.product-showcase__slide{
+    display:none;
+}
+
+.product-showcase__slide.active{
+    display:block;
+}
+
+.product-showcase__content{
+    max-width:1350px;
+    margin:auto;
+    padding:40px 40px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.product-showcase__images{
+    width:50%;
+    position:relative;
+    padding-top: 0px;
+}
+
+.product-showcase__food{
+    width:500px;
+}
+
+.product-showcase__pack{
+    position:absolute;
+    right:-10px;
+    bottom:-30px;
+    width:180px;
+}
+
+.product-showcase__info{
+    width:40%;
+    color:#fff;
+}
+
+.product-showcase__title{
+    font-size:70px;
+    margin-bottom:25px;
+}
+
+.product-showcase__description{
+    line-height:2;
+    margin-bottom:40px;
+}
+
+.product-showcase__btn{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    padding:15px 32px;
+    background:#fff;
+    color:#0c6eb6;
+    border-radius:50px;
+}
+
+.product-showcase__bottom{
+    padding:35px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.product-showcase__progress{
+    width:250px;
+    height:3px;
+    background:rgba(255,255,255,.3);
+}
+
+.product-showcase__progress-line{
+    display:block;
+    width:35%;
+    height:100%;
+    background:#fff;
+}
+
+.product-showcase__thumbs{
+    display:flex;
+    gap:25px;
+}
+
+.product-showcase__thumb{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#fff;
+    opacity:.5;
+    cursor:pointer;
+}
+
+.product-showcase__thumb.active{
+    opacity:1;
+}
+
+.product-showcase__thumb img{
+    width:55px;
+}
+
+.product-showcase__arrow{
+    width:55px;
+    height:55px;
+    border:none;
+    background: none;
+    cursor:pointer;
+    color:white;
+}
+
+.product-showcase__bottom i{
+    font-size: 28px;
+}
+
+.product-showcase__bg-shape{
+
+    position: absolute;
+    opacity: .08;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.shape-1{
+    top: 40px;
+    left: 70px;
+    width: 170px;
+}
+
+.shape-2{
+    right: 170px;
+    top: 100px;
+    width: 150px;
+}
+
+.shape-3{
+    left: 300px;
+    bottom: 80px;
+    width: 190px;
+}
+
+.shape-4{
+    width: 170px;
+    bottom: 80px;
+    left: 65%;
+    bottom: 120px;
+}
