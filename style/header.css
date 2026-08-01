@@ -322,6 +322,10 @@ ul{
     transform: translate(22.5px,22.5px);
 }
 
+body.menu-open{
+    overflow: hidden;
+}
+
 @media (max-width:992px){
     .header__toggle{
         display: block;
