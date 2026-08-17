@@ -32,13 +32,13 @@
 
 .feature-section__content{
     position:absolute;
-    top:47.5%;
-    right:0;
-    width:46%;
-    min-height:100px;
+    top:46.4%;
+    right:-1.9%;
+    width:60%;
+    min-height:200px;
     background:#003190;
     color:#fff;
-    padding:35.5px 80px;
+    padding:30px 40px;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -47,6 +47,21 @@
     transition:
         transform .9s cubic-bezier(.22,.61,.36,1),
         opacity .9s ease;
+    transition-delay: 1s;
+}
+
+.feature-section__text{
+    font-size: 17px;
+    line-height: 2;
+
+}
+
+.feature-section__title{
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 15px;
+
 }
 
 .feature-section__line{
@@ -56,8 +71,10 @@
     width: calc(100% + 160px);
     height: 2px;
     background: #fff;
-    margin-bottom: 35px;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
+
 
 .feature-section__dots{
     position: absolute;
@@ -86,4 +103,65 @@
 .feature-section__content.show{
     opacity:1;
     transform:translate(0,-50%);
+}
+
+.about__button-f{
+    display:flex;
+    align-items:center;
+    width:150px;
+    height:43px;
+    background:#2650a1;
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:500;
+    position:relative;
+    justify-content:flex-end;
+    border-radius: 2px;
+    margin-right: 520px;
+}
+
+.about__button-text-f{
+    flex:1;
+    text-align:center;
+    margin-right: -10px;
+}
+
+.about__button-circle-f{
+    width:50px;
+    height:47.5px;
+    background:#2650a1;
+    border-radius:48% 40% 13% 48%;
+    position:absolute;
+    left:-31px;
+    top:50%;
+    transform:translateY(-50%);
+    border-right:3.5px solid #003190;
+    border-top:3.5px solid #003190;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:4px;
+    margin-top: -2px;
+}
+
+.about__button-circle-f span{
+    display:block;
+    height:1.5px;
+    background:white;
+    border-radius:10px;
+}
+
+
+.about__button-circle-f span:nth-child(1){
+    width:20px;
+}
+
+.about__button-circle-f span:nth-child(2){
+    width:14px;
+}
+
+.about__button-circle-f span:nth-child(3){
+    width:8px;
 }

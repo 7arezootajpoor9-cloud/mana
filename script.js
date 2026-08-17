@@ -10,3 +10,16 @@ menuBtn.addEventListener("click", function(){
     document.body.classList.toggle("menu-open");
 
 });
+
+
+const featureContent = document.querySelector('.feature-section__content');
+
+const observer = new IntersectionObserver((entries) => {
+
+    if (entries[0].isIntersecting) {
+        featureContent.classList.add('show');
+    }
+
+});
+
+observer.observe(featureContent);
