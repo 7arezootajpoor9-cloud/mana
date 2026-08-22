@@ -25,40 +25,37 @@ const nextButton = document.querySelector('.product-showcase__arrow--next');
 const prevButton = document.querySelector('.product-showcase__arrow--prev');
 const thumbs = document.querySelectorAll('.product-showcase__thumb');
 let currentSlide = 0;
+let isAnimating = false;
 
 
 function showSlide(index) {
 
-    if(index === currentSlide) {
+    if (index === currentSlide || isAnimating) {
         return;
     }
 
+    isAnimating = true;
+
     const oldSlide = slides[currentSlide];
     const newSlide = slides[index];
-
     const oldImages = oldSlide.querySelector('.product-showcase__images');
-
     oldImages.classList.add('flip-out');
+
     setTimeout(function() {
 
         oldSlide.classList.remove('active');
-
         newSlide.classList.add('active');
 
         const newImages = newSlide.querySelector('.product-showcase__images');
-
         const newInfo = newSlide.querySelector('.product-showcase__info');
-
         newImages.classList.add('flip-in');
-
         newInfo.classList.add('flip-text');
-
 
         thumbs.forEach(function(thumb) {
             thumb.classList.remove('active');
         });
-        thumbs[index].classList.add('active');
 
+        thumbs[index].classList.add('active');
         const progressLines = document.querySelectorAll(
             '.product-showcase__progress-line'
         );
@@ -68,14 +65,13 @@ function showSlide(index) {
         });
 
         progressLines[index].classList.add('active');
-
         currentSlide = index;
-
 
         setTimeout(function() {
             oldImages.classList.remove('flip-out');
             newImages.classList.remove('flip-in');
             newInfo.classList.remove('flip-text');
+            isAnimating = false;
         }, 700);
     }, 350);
 }
